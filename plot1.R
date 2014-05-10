@@ -1,17 +1,16 @@
 ### plot1.R
-setwd("./ExData_Plotting1")
-## create rawData directory
-# if (!file.exists("rawData")) {
-#   dir.create("rawData")
-# }
+# create rawData directory
+if (!file.exists("rawData")) {
+  dir.create("rawData")
+}
 
 ## download data
-# fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-# download.file(fileUrl, destfile = "./rawData/UCI_household_power_consumption.zip", method = "curl")
-# dateDownloaded <- date()
+fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+download.file(fileUrl, destfile = "./rawData/UCI_household_power_consumption.zip", method = "curl")
+dateDownloaded <- date()
 
 ## Unzip the file into the dir
-# unzip("./rawData/UCI_household_power_consumption.zip", exdir = "./rawData")
+unzip("./rawData/UCI_household_power_consumption.zip", exdir = "./rawData")
 
 ## load data
 raw <- read.table("./rawData/household_power_consumption.txt", na.strings = "?" , header = TRUE, sep = ";")

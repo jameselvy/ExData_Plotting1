@@ -31,9 +31,10 @@ summary(dataCut)
 dataCut$dateTime<- paste(dataCut$Date, dataCut$Time, sep=" ")
 dataCut$dateTime <- strptime(dataCut$dateTime, "%d/%m/%Y %H:%M:%S")
 
-## Create plot1
+## Create plot1 
 png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "transparent")
 hist(dataCut$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power")
 dev.off()
+
 
 

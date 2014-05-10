@@ -1,4 +1,5 @@
 ### plot1.R
+
 # create rawData directory
 if (!file.exists("rawData")) {
   dir.create("rawData")
